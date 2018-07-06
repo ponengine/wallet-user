@@ -37,7 +37,7 @@ public class UserService {
 		UserInfo userinfo = new UserInfo();
 		userlogin.setUsername(userInfoDTO.getUserName());
 		userlogin.setPassword(userInfoDTO.getPassword());
-		userinfo.setCityzenId(userInfoDTO.getCityzenId());
+		userinfo.setCitizenId(userInfoDTO.getCityzenId());
 		userinfo.setFirstName(userInfoDTO.getFirstName());
 		userinfo.setLastName(userInfoDTO.getLastName());
 		userinfo.setPin(userInfoDTO.getPin());

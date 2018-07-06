@@ -33,7 +33,7 @@ public class UserInfo implements Serializable{
 	private Long id;
 	private String firstName;
 	private String lastName;
-	private String cityzenId;
+	private String citizenId;
 	private LocalDate createDate;
 	private String userName;
 	private int pin;
