@@ -12,6 +12,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
+import javax.validation.constraints.Email;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -35,9 +36,12 @@ public class UserInfo implements Serializable{
 	private String lastName;
 	private String citizenId;
 	private LocalDate createDate;
-	private String userName;
+	private LocalDate updateDate;
 	private int pin;
+	private String userName;
 	private String status;
+	@Email
+	private String email;
 	
 	public UserInfo() {
 	}

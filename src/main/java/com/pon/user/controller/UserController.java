@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import com.pon.user.dto.UserInfoDTO;
+import com.pon.user.entity.UserLogin;
 import com.pon.user.service.UserService;
 
 
@@ -26,15 +27,19 @@ public class UserController {
 		return userservice.addProfileUser(userInfoDTO);
 	}
 	@PostMapping("/deleteuser")
-	public String deleteUser(@RequestParam("username") String username){
-		return userservice.deleteuser(username);
+	public String deleteUser(@RequestBody UserInfoDTO userInfoDTO){
+		return userservice.deleteuser(userInfoDTO);
 	}
-//	public void updateUser(String username){
-//		userinforepository.save(arg0)
-//	}
+	public String  updateUser(@RequestBody UserInfoDTO userInfoDTO){
+		return userservice.updateUser(userInfoDTO);
+	}
 	@GetMapping("/getuser/{username}")
 	public UserInfoDTO getUser(@PathVariable("username")String username){
 		return userservice.getuser(username);
 	}
+	public String changePassword(@RequestBody UserInfoDTO userInfoDTO){
+		return userservice.changePassword(userInfoDTO);
+	}
+	
 
 }

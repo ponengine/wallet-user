@@ -3,8 +3,7 @@ package com.pon.user.constant;
 public enum Role {
 	
 	USER("U"),
-	ADMIN("A"),
-	BLACKLIST("B");
+	ADMIN("A");
 	
 	private String role;
 

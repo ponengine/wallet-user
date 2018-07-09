@@ -7,5 +7,6 @@ import com.pon.user.entity.UserLogin;
 
 
 public interface UserLoginRepository extends CrudRepository<UserLogin, Long>{
+	UserLogin findByUsername(String username);
 
 }

@@ -14,6 +14,8 @@ public class UserInfoDTO {
 	private LocalDateTime createDate;
 	private String userName;
 	private String password;
+	private String email;
 	private int pin;
 	private String status;
+	private String message;
 }
